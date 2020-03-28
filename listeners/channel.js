@@ -1,9 +1,20 @@
 const env = require('../environments/environments');
+const commands = ['/kayıt'];
 
 function initialize(discordClient, pubsub) {
-  discordClient.once('message', (value) => {
-    if (value.channel.id === env.channel.signupID) {
-      pubsub.emit('channelReply', value.content);
+  discordClient.on('message', (value) => {
+    const command = (value.content.split(' ')[0] || '');
+
+    if (
+      value.channel.id === env.channel.signupID
+      && commands.indexOf(command) !== -1
+    ) {
+      pubsub.emit('channelReply', {
+        command,
+        message: value.content,
+        userID: value.author.id,
+        client: value,
+      });
     }
   });
 }
