@@ -13,7 +13,6 @@ module.exports = {
     "sourceType": "module"
   },
   "rules": {
-    "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
     "comma-dangle": ["error", "always-multiline"],
     "comma-spacing": "error",
     "comma-style": "error",
