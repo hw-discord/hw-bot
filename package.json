@@ -1,0 +1,18 @@
+{
+  "name": "hw-bot",
+  "version": "1.0.0",
+  "description": "hello_world discord sunucusu için geliştirilmiş bot.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mozhn <mazlum@tuta.io>",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.1.1",
+    "rcon": "^1.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
