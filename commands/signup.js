@@ -21,11 +21,10 @@ async function execute(value, userID) {
 
     const password = Math.random().toString(36)
       .substr(2, 6).toUpperCase();
-    console.log(password);
+
     result.data.push({
       username: params[1],
       userID,
-      password,
     });
 
     const updateResult = await updateData(result.data);
