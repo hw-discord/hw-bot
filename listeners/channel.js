@@ -7,6 +7,7 @@ function initialize(discordClient, pubsub) {
 
     if (
       value.channel.id === env.channel.signupID
+      && value.guild.id === env.discord.guildID
       && commands.indexOf(command) !== -1
     ) {
       pubsub.emit('channelReply', {
